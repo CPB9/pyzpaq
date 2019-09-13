@@ -47,7 +47,7 @@ static PyObject* compress(PyObject *self, PyObject *args)
         return NULL;
     In in((const uint8_t*)input_buffer.buf, input_buffer.len);
     Out out;
-    libzpaq::compress(&in, &out, "3");
+    libzpaq::compress(&in, &out, "5");
     return PyBytes_FromStringAndSize((const char*)out.data().data(), out.data().size());
 }
 
