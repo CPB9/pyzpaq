@@ -1,8 +1,9 @@
+import sys
 from setuptools import setup, Extension
 
 zpaq = Extension('zpaq',
                   sources = ['pyzpaq.cpp', 'zpaq/libzpaq.cpp'],
-                  libraries = ['advapi32'])
+                  libraries = ['advapi32'] if sys.platform.startswith("win") else [])
 
 setup (name = 'pyzpaq',
        version = '0.1.1',
