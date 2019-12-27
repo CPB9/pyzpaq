@@ -6,7 +6,7 @@ zpaq = Extension('zpaq',
                   libraries = ['advapi32'] if sys.platform.startswith("win") else [])
 
 setup (name = 'pyzpaq',
-       version = '0.1.1',
+       version = '0.1.2',
        description = 'Python zpaq bindings',
        url='https://github.com/CPB9/pyzpaq.git',
        ext_modules = [zpaq])
