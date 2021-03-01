@@ -1,0 +1,1 @@
+c:\Python\Python37-32\Scripts\twine.exe upload %CD%\..\dist\* --repository-url https://upload.pypi.org/legacy/
