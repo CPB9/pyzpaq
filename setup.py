@@ -8,6 +8,7 @@ if sys.argv[1] == 'sdist':
 print(ss)    
 
 zpaq = Extension('zpaq',
+                  define_macros = [('unix', '1'), ('BSD', 1)] if sys.platform.startswith("darwin") else [],   
                   sources = ss,
                   libraries = ['advapi32'] if sys.platform.startswith("win") else [])
 
